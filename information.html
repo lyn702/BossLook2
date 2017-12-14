@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>园区总数据</title>
+        <link href="https://www.bigc.cc/mer/mer.min.css" rel="stylesheet">
+    </head>
+    <style media="screen">
+        body {
+            font-family: 'Arial Normal', 'Arial';
+            text-align: center;
+            margin: 0;
+        }
+        .topline {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            height: 5rem;
+            background-color: rgba(51, 51, 51, 1);
+        }
+        .topline img {
+            width: 50px;
+            height: 50px;
+            margin-right: 3%;
+        }
+        .head {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem auto;
+            font-size: 2.8rem;
+            padding: .5rem 0;
+            color: #868686;
+        }
+        .today {
+            width: 50%;
+        }
+        .month {
+            width: 50%;
+        }
+        .Summary {
+            margin: 0 auto;
+            width: 98%;
+            border-radius: 10px;
+            background-color: rgba(81, 81, 81, 1);
+        }
+        .money-all {
+            padding: 3rem;
+            font-size: 2.3rem;
+            color: #FFFFFF;
+        }
+        .money-num {
+            padding: 3rem;
+            padding-top: 0;
+            font-size: 3.5rem;
+            color: #FFFFFF;
+        }
+        .firstline {
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+            padding-top: 0;
+            font-size: 2.3rem;
+            color: #FFFFFF;
+        }
+        .secondline {
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+            padding-top: 0;
+            font-size: 2.3rem;
+            color: #FFFFFF;
+        }
+        .name {
+            width: 50%;
+        }
+        .number-1 {
+            width: 50%;
+            border-right: 2px solid #FFFFFF;
+        }
+        .number-2{
+            width: 50%;
+            border-left: 2px solid #FFFFFF;
+        }
+        .tongdao {
+            margin: 0 auto;
+            margin-top: .5rem;
+            width: 98%;
+            border-radius: 10px;
+            background-color: rgba(81, 81, 81, 1);
+        }
+        .channel_name {
+            text-align: left;
+            padding: 3rem;
+            font-size: 2.3rem;
+            color: #FFFFFF;
+        }
+        .money {
+            text-align: left;
+            padding: 3rem;
+            padding-top: 0;
+            font-size: 3.5rem;
+            color: #FFFFFF;
+        }
+    </style>
+    <body>
+        <div class="all">
+            <div class="topline">
+                <img class="back" src="image/u221.png" alt="">
+            </div>
+            <div class="head">
+                <div class="today click">今日数据</div>
+                <div class="month">本月数据</div>
+            </div>
+            <div class="Summary">
+                <div class="money-all">所有园区收入</div>
+                <div class="money-num">￥ 金额</div>
+                <div class="firstline">
+                    <div class="name">核销单数</div>
+                    <div class="name">单笔均额</div>
+                </div>
+                <div class="secondline">
+                    <div class="number-1">单数</div>
+                    <div class="number-2">均额</div>
+                </div>
+            </div>
+            <div class="xm"></div>
+        </div>
+    </body>
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+    <script src="information.js"></script>
+</html>
