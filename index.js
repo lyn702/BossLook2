@@ -112,7 +112,7 @@ if ('yes' === getIsstorePwd) {
                     let scene_id = res.user_info.scene_id
                     // log(scene_id)
                     if (res.result === 0) {
-                        // window.location = `information.html?scene_id=${scene_id}`
+                        window.location = `information.html?scene_id=${scene_id}`
                     } else {
                         alert('账号或密码错误')
                     }
