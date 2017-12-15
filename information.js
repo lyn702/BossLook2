@@ -11,13 +11,6 @@ let scene = function() {
 }
 scene()
 
-// 点击图片进入退出界面
-$('#backimage').on('click', function() {
-    let scene_id = su['scene_id']
-    log(scene_id)
-    window.location = `reload.html?scene_id=${scene_id}`
-})
-
 // 金额，园区显示（今日数据）
 let today_xinxi = function () {
     let request = ({
@@ -68,9 +61,31 @@ let today_xinxi = function () {
 // 核销数目显示（今日数据）
 let today_shouru = function () {
     let request = ({
-
-
+        url: "https://leyuanxing.net/newapi/Wxbossboard/incomeAndVisitor",
+        data: {
+            // "action": 'incomeAndvisitor',
+            "scene_id": su['scene_id'],
+        },
+        header: {
+            "Content-Type": "application/json"
+        },
+        method: 'POST',
+        success: function(res) {
+            log(res)
+            // su.html = ''
+            let money = res.info.today_income
+            let people = res.info.today_visitors
+            let order = res.info.today_orders
+            log(money, people, order)
+            let t = `
+                <div class="number-1">${order}</div>
+                <div class="number-2">人数</div>
+            `
+            su.html =  t
+            $('.secondline-all').html(su.html)
+        }
     })
+    $.ajax(request)
 }
 
 // 金额，园区显示（本月数据）
@@ -120,12 +135,49 @@ let month_xinxi = function () {
     $.ajax(request)
 }
 
+// 核销数目显示（今日数据）
+let month_shouru = function () {
+    let request = ({
+        url: "https://leyuanxing.net/newapi/Wxbossboard/incomeAndVisitor",
+        data: {
+            // "action": 'incomeAndvisitor',
+            "scene_id": su['scene_id'],
+        },
+        header: {
+            "Content-Type": "application/json"
+        },
+        method: 'POST',
+        success: function(res) {
+            log(res)
+            // su.html = ''
+            let money = res.info.month_income
+            let people = res.info.month_visitors
+            let order = res.info.month_orders
+            log(money, people, order)
+            let t = `
+                <div class="number-1">${order}</div>
+                <div class="number-2">人数</div>
+            `
+            su.html =  t
+            $('.secondline-all').html(su.html)
+        }
+    })
+    $.ajax(request)
+}
+
 // 页面初始显示今日数据
   let onshow = function () {
       today_xinxi()
-      // today_shouru()
+      today_shouru()
   }
   onshow()
+
+  // 点击图片进入退出界面
+  $('#backimage').on('click', function() {
+      let scene_id = su['scene_id']
+      log(scene_id)
+      window.location = `reload.html?scene_id=${scene_id}`
+  })
 
   // 点击今日数据
 $('.today').on('click', function() {
@@ -141,5 +193,5 @@ $('.today').on('click', function() {
      $('.today').removeClass('click')
      $('.month').addClass('click')
      month_xinxi()
-     // month_shouru()
+     month_shouru()
  })

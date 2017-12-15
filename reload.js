@@ -11,6 +11,26 @@ let scene = function() {
 }
 scene()
 
+let onshow = function () {
+    let storage = window.localStorage
+    let boss = storage['nickname']
+    log(boss)
+    let t = `
+    <div class="infos">
+        <img id="tupian" src="image/u137.png" alt="">
+        <div class="info">
+            <div class="people">管理员</div>
+            <div class="tel">${boss}</div>
+        </div>
+    </div>
+    `
+    su.html = t
+    // log(su.html)
+    $('.infos').html(su.html)
+}
+onshow()
+
+
 // 点击返回
 $('.goback').on('click', function() {
     let scene_id = su['scene_id']
