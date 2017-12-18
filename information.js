@@ -32,9 +32,10 @@ let today_xinxi = function () {
                     let info = infos[i]
                     let channel = info.channel_name
                     let money = info.total_income_today
-                    // log(channel, money)
+                    let id = info.channel_id
+                    // log(channel, money, id)
                     let t = `
-                    <div class="tongdao">
+                    <div id='${id}' class="tongdao">
                         <div class="channel_name">${channel}</div>
                         <div class="money">￥${money}</div>
                         <div class="firstline">
@@ -51,6 +52,9 @@ let today_xinxi = function () {
                     if (i === infos.length - 1) {
                         $('.xm').html(su.html)
                     }
+                    $('.tongdao').on('click', function() {
+                        alert('点击')
+                    })
                 }
             }
         }
@@ -109,7 +113,8 @@ let month_xinxi = function () {
                     let info = infos[i]
                     let channel = info.channel_name
                     let money = info.total_income_month
-                    // log(channel, money)
+                    let id = info.channel_id
+                    // log(channel, money, id)
                     let t = `
                     <div class="tongdao">
                         <div class="channel_name">${channel}</div>
@@ -128,6 +133,9 @@ let month_xinxi = function () {
                     if (i === infos.length - 1) {
                         $('.xm').html(su.html)
                     }
+                    $('.tongdao').on('click', function() {
+                        alert('点击')
+                    })
                 }
             }
         }

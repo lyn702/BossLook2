@@ -49,6 +49,13 @@ let ceshi = function () {
 }
 ceshi()
 
+// 点击图片进入退出界面
+$('#backimage').on('click', function() {
+    let scene_id = su['scene_id']
+    log(scene_id)
+    window.location = `reload.html?scene_id=${scene_id}`
+})
+
 // 点击今日数据
 $('.today').on('click', function() {
   log('今日数据')
