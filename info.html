@@ -114,12 +114,15 @@
             background-color: rgba(255, 255, 255, 1);
         }
         .thirdline {
-            padding: 3rem;
+            padding: 2rem;
             padding-bottom: 0;
             padding-left: 1.5rem;
             font-size: 2.3rem;
         }
         .thirdline img {
+            height: 60px;
+        }
+        .fourthline img {
             height: 60px;
         }
         .card-income {
@@ -173,8 +176,7 @@
             background-color: rgba(255, 255, 255, 1);
         }
         .fourthline {
-            padding: 3rem;
-            padding-bottom: 0;
+            padding: 2rem;
             padding-left: 1.5rem;
             font-size: 2.3rem;
         }
@@ -189,10 +191,25 @@
             margin: 0 auto;
             padding: 2rem;
             padding-bottom: 1.5rem;
+            border-bottom: 1px solid #1E1E1E;
             text-align: left;
             font-size: 3rem;
             font-weight: bold;
             color: #1E1E1E;
+        }
+        .channel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 96%;
+            margin: 0 auto;
+            padding: 2rem;
+            padding-top: 0;
+            font-size: 2.3rem;
+        }
+        .channel_bilv {
+            text-align: left;
+            width: 68%;
         }
     </style>
     <body>
@@ -250,6 +267,12 @@
                         <div class="">单项票总收入</div>
                     </div>
                     <div class="piao-money">￥ 金额</div>
+                </div>
+                <div class="info-2">
+                    <div class="channel">
+                        <div class="channel_name">通道名</div>
+                        <div class="channel_bilv">比率</div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -166,18 +166,18 @@ let month_shouru = function () {
 }
 
 // 页面初始显示今日数据
-  let onshow = function () {
-      today_xinxi()
-      today_shouru()
-  }
-  onshow()
+let onshow = function () {
+    today_xinxi()
+    today_shouru()
+}
+onshow()
 
-  // 点击图片进入退出界面
-  $('#backimage').on('click', function() {
-      let scene_id = su['scene_id']
-      log(scene_id)
-      window.location = `reload.html?scene_id=${scene_id}`
-  })
+// 点击图片进入退出界面
+$('#backimage').on('click', function() {
+    let scene_id = su['scene_id']
+    log(scene_id)
+    window.location = `reload.html?scene_id=${scene_id}`
+})
 
   // 点击今日数据
 $('.today').on('click', function() {
