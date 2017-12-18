@@ -4,6 +4,7 @@ const su = {}
 // 获得景区ID
 let scene = function() {
     let lujing = location.search.slice(1)
+    // log(lujing)
     let scene_id = lujing.split('=')[1]
     // log(scene_id)
     su['scene_id'] = scene_id
@@ -53,7 +54,9 @@ let today_xinxi = function () {
                         $('.xm').html(su.html)
                     }
                     $('.tongdao').on('click', function() {
-                        alert('点击')
+                        let scene_id = su['scene_id']
+                        // alert('点击')
+                        window.location = `info.html?scene_id=${scene_id}`
                     })
                 }
             }

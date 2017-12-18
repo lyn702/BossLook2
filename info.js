@@ -49,6 +49,13 @@ let ceshi = function () {
 }
 ceshi()
 
+// 点击返回按钮
+$('.back').on('click', function() {
+    let scene_id = su['scene_id']
+    // log(scene_id)
+    window.location = `information.html?scene_id=${scene_id}`
+})
+
 // 点击图片进入退出界面
 $('#backimage').on('click', function() {
     let scene_id = su['scene_id']
