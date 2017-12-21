@@ -15,7 +15,7 @@ scene()
 // 金额，园区显示（今日数据）
 let today_xinxi = function () {
     let request = ({
-        url: "https://leyuanxing.net/newapi/Wxbossboard/incomeOfChannels",
+        url: "http://120.79.12.95/newapi/Wxbossboard/incomeOfChannels",
         data: {
             // "action": 'incomeAndvisitor',
             "scene_id": su['scene_id'],
@@ -34,6 +34,7 @@ let today_xinxi = function () {
                     let channel = info.channel_name
                     let money = info.total_income_today
                     let id = info.channel_id
+                    let today_new = info.new_members_today
                     // log(channel, money, id)
                     let t = `
                     <div id='${id}' class="tongdao">
@@ -45,7 +46,7 @@ let today_xinxi = function () {
                         </div>
                         <div class="secondline">
                             <div class="number-1">单数</div>
-                            <div class="number-2">人数</div>
+                            <div class="number-2">${today_new}</div>
                         </div>
                     </div>
                     `
@@ -69,7 +70,7 @@ let today_xinxi = function () {
 // 核销数目显示（今日数据）
 let today_shouru = function () {
     let request = ({
-        url: "https://leyuanxing.net/newapi/Wxbossboard/incomeAndVisitor",
+        url: "http://120.79.12.95/newapi/Wxbossboard/incomeAndVisitor",
         data: {
             // "action": 'incomeAndvisitor',
             "scene_id": su['scene_id'],
@@ -131,7 +132,7 @@ let today_shouru = function () {
 // 金额，园区显示（本月数据）
 let month_xinxi = function () {
     let request = ({
-        url: "https://leyuanxing.net/newapi/Wxbossboard/incomeOfChannels",
+        url: "http://120.79.12.95/newapi/Wxbossboard/incomeOfChannels",
         data: {
             // "action": 'incomeAndvisitor',
             "scene_id": su['scene_id'],
@@ -150,6 +151,7 @@ let month_xinxi = function () {
                     let channel = info.channel_name
                     let money = info.total_income_month
                     let id = info.channel_id
+                    let month_new = info.new_members_month
                     // log(channel, money, id)
                     let t = `
                     <div class="tongdao">
@@ -161,7 +163,7 @@ let month_xinxi = function () {
                         </div>
                         <div class="secondline">
                             <div class="number-1">单数</div>
-                            <div class="number-2">人数</div>
+                            <div class="number-2">${month_new}</div>
                         </div>
                     </div>
                     `
@@ -182,7 +184,7 @@ let month_xinxi = function () {
 // 核销数目显示（本月数据）
 let month_shouru = function () {
     let request = ({
-        url: "https://leyuanxing.net/newapi/Wxbossboard/incomeAndVisitor",
+        url: "http://120.79.12.95/newapi/Wxbossboard/incomeAndVisitor",
         data: {
             // "action": 'incomeAndvisitor',
             "scene_id": su['scene_id'],
