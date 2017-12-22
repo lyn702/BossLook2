@@ -54,29 +54,44 @@ let liebiao = function() {
 
         // 指定图表的配置项和数据
         var option = {
-            title: {
-                text: '测试\n例子',
-                textStyle: {
-                    color: '#000000',
-                    fontSize: 18,
-                    fontWeight: 'bold',
-                },
-            },
-            tooltip: {},
-            legend: {
-                data:['销量'],
-            },
-            xAxis: {
-                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
-            },
-            yAxis: {},
-            series: [{
-                name: '销量',
-                type: 'bar',
-                data: [5, 20, 36, 10, 10, 20],
+        title: {
+            // text: '测试\n例子',
+            textStyle: {
                 color: '#000000',
-            }]
-        };
+                fontWeight: 'bold',
+            },
+        },
+        tooltip: {},
+        legend: {
+            // data:['销量'],
+        },
+        grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+        },
+        xAxis: {},
+        yAxis: {
+            data: ["水上乐园","水上世界01","某某世界01","某某世界02","陆地世界","什么世界","还有什么"]
+        },
+        series: [{
+            name: '销量',
+            type: 'bar',
+            data: [50, 200, 360, 100, 150, 220, 180],
+            color: '#000000',
+            textStyle: {
+                fontSize: 50,
+                fontWeight: 'bold',
+            },
+            label: {
+                normal: {
+                    show: true,
+                    position: 'right',
+                }
+            }
+        }]
+    };
 
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
